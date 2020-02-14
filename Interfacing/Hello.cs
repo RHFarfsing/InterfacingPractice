@@ -6,8 +6,11 @@ namespace Interfacing {
     class Hello {
         ISpeakable Language;
         public void Speak() {
-            Language.SayHello();
-            Language.SayGoodbye();
+            Console.WriteLine($"Ready! : {Language.GetMessage(0)}");
+            Console.WriteLine($"Hello : {Language.GetMessage(1)}");
+            Console.WriteLine($"Goodbye : {Language.GetMessage(2)}");
+            Console.WriteLine($"Error: {Language.GetMessage(3)}");
+
         }
         public Hello(ISpeakable language) {
             Language = language;

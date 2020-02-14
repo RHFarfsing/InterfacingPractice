@@ -3,21 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Interfacing {
-    class HelloInPirate : ISpeakable{
-        Dictionary<int, string> messages = new Dictionary<int, string> {
-            [0] = "Ready!",
-            [1] = "A hoy",
-            [2] = "Goodbye",
-            [9999] = "Message number not found"
-        };
-
-        public void SayHello() {
-            Console.WriteLine("A hoy");
+    class HelloInPirate : HelloInLanguage{
+        protected override void InitDictionary() {
+            this.messages.Add(0, "Ready!");
+            this.messages.Add(1, "A hoy");
+            this.messages.Add(2, "Goodbye");
         }
-        public void SayGoodbye() {
-            Console.WriteLine("Goodbye");
+        public HelloInPirate() : base(){
+
         }
-
-
     }
 }

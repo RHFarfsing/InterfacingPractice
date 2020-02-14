@@ -9,9 +9,13 @@ namespace Interfacing {
         };
         protected abstract void InitDictionary();
         public virtual string GetMessage(int messageNumber) {
-            if (!messages.ContainsKey(messageNumber))
+            if (!messages.ContainsKey(messageNumber)) {
                 return messages[9999];
-        } 
+            }         
            return messages[messageNumber];
+        }
+        public HelloInLanguage() {
+            InitDictionary();
+        }
     }
 }

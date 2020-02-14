@@ -4,17 +4,20 @@ using System.Collections.Generic;
 namespace Interfacing {
     class Program {
         static void Main(string[] args) {
-            var english = new HelloInEnglish();
-            var spanish = new HelloInSpanish();
-            var hello = new Hello(english);
-            hello.Speak();
-            var hello2 = new Hello(spanish);
-            hello2.Speak();
-            var hellofr = new Hello(new HelloInFrench());
-            hellofr.Speak();
-            var hellopir = new Hello(new HelloInPirate());
-            hellopir.Speak();
-
+            //var english = new HelloInEnglish();
+            //var spanish = new HelloInSpanish();
+            //var hello = new Hello(english);
+            //hello.Speak();
+            //var hello2 = new Hello(spanish);
+            //hello2.Speak();
+            //var hellofr = new Hello(new HelloInFrench());
+            //hellofr.Speak();
+            //var hellopir = new Hello(new HelloInPirate());
+            //hellopir.Speak();
+            (new Hello(new HelloInEnglish())).Speak();
+            (new Hello(new HelloInSpanish())).Speak();
+            (new Hello(new HelloInFrench())).Speak();
+            (new Hello(new HelloInPirate())).Speak();
         }
         static void TestInterfaceWidgets() { 
 
